@@ -1,0 +1,176 @@
+* {
+  /* retirando todos as margens e padding*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #fff;
+  height: 80px;
+}
+
+header #navbar {
+  display: flex; /*coloca os elementos lado a lado*/
+  justify-content: space-between; /*alinha horizontalmente*/
+  align-items: center; /*centraliza os itens da navbar*/
+  background-color: #777;
+  padding: 0 2rem; /*1rem = 16px melhor para responsividade*/
+  max-width: 1200px; /*limita o tamanho da pagina*/
+  margin: 0 auto; /*centraliza barra de navegação*/
+  height: 80px; /*aumenta o tamanho da barra de navegação*/
+}
+
+header #navbar .nav-brand {
+  text-decoration: none; /*tira o sublinhado do href*/
+  font-size: 1.5rem; /*aumenta a fonte*/
+  font-weight: 700; /*font mais forte quase negrito*/
+  color: #333; /*cinza*/
+}
+
+header #navbar .nav-list {
+  list-style: none; /*tira as bolinas da lista*/
+  display: flex; /*coloca itens da lista lado a lado*/
+  align-items: center; /*centraliza os itens da lista li*/
+  gap: 2rem; /*criar espaços entre os itens da lista*/
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color: #777;
+  transition: color 0.3s;
+}
+
+/*Section Banner*/
+main {
+  margin-top: 6rem; /*descolando da navbar*/
+}
+
+main #banner {
+  display: flex; /*lado a lado*/
+  justify-content: space-between; /*alinha horizontalmente*/
+  max-width: 1200px;
+  padding: 0 2rem; /*top e bottom 0 esq e dir 2rem*/
+  margin: 0 auto; /*cnetralizando*/
+}
+
+main #banner .banner-content .banner-content-title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px; /*altura da linha*/
+  margin-bottom: 40px;
+}
+
+main #banner .banner-content .banner-content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px; /*centraliza o texto*/
+  margin-bottom: 38px;
+}
+
+main #banner .banner-content .banner-content-btn {
+  background-color: #00abcc;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 8px 24px;
+  border: none;
+}
+
+main #banner .banner-image {
+  /*arredondado e diminuido o tamanho da imagem*/
+  border-radius: 50%; /*arredonda a imagem*/
+  width: 100%; /*aumenta a imagem para aplicar tamanho menor*/
+  max-width: 300px; /*diminui o tamanho da imagem*/
+}
+
+@media (max-width: 920px) {
+  main#banner {
+    flex-direction: column-reverse; /*o que esta a direita vai para cima*/
+    align-items: center;
+    gap: 2rem;
+  }
+
+  main #banner .banner-content {
+    text-align: cneter;
+  }
+}
+
+/* SECTION POSTS*/
+section#posts {
+  margin-top: 71px;
+  background-color: #5dc2e0;
+}
+
+#posts .posts-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#posts .posts-content .posts-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+#posts .posts-content .posts-content-header .section-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#posts .posts-content .posts-content-header .view-all-link {
+  text-decoration: none;
+  color: #00a8cc;
+}
+
+#posts .posts-content .posts-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#posts .posts-content .posts-cards .post-card {
+  background-color: #fff;
+  padding: 24px;
+}
+
+#posts .posts-content .posts-cards .post-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 37px;
+}
+
+#posts .posts-content .posts-cards .post-card span {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  display: block;
+}
+
+@media (max-width: 740px) {
+  #posts .posts-content .posts-cards {
+    flex-direction: column;
+  }
+}
